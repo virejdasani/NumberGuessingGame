@@ -16,16 +16,17 @@ answer = randint(1, 9)
 
 user_input = int(input("Guess any number between 0 and 10\n"))
 
-while user_input != answer:
-    if user_input > answer:
-        user_input = int(input("The answer is smaller, Guess again\n"))
+while True:
+    if user_input == answer:
+        print("CORRECT")
+        user_input = int(input(""))
 
+    elif user_input > answer:
+        print("The number is smaller, Guess Again")
+        user_input = int(input(""))
 
     elif user_input < answer:
-        user_input = int(input("The answer is bigger, Guess again\n"))
-
-    else:
-        print("CORRECT!")
-
-stringAnswer = str(answer)
-print("CORRECT \nThe answer was: " + stringAnswer)
+        print("The number is bigger, Guess Again")
+        user_input = int(input("")) 
+       
+          
